@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# Leonald Pilvera - Virtual Assistant Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About Me
+I am a dedicated Virtual Assistant with extensive experience in AI automation, email marketing, and social media management. My goal is to help businesses streamline their operations and maximize their online presence through efficient digital solutions.
 
-Currently, two official plugins are available:
+## 🎯 Expertise
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **GHL Expert**
+  - Proficient in Go High Level platform management and automation
+  - Campaign setup and optimization
+  - Client management and workflow automation
 
-## Expanding the ESLint configuration
+- **AI Automations**
+  - Implementation of AI-powered solutions
+  - Workflow automation and optimization
+  - Integration of AI tools for business efficiency
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Cold Email Specialist**
+  - Email campaign strategy and execution
+  - List building and management
+  - Campaign performance optimization
+  - High deliverability maintenance
 
-- Configure the top-level `parserOptions` property like this:
+- **Social Media Management**
+  - Content strategy development
+  - Platform-specific content creation
+  - Engagement optimization
+  - Analytics and reporting
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Executive Assistant Level**
+  - Calendar management
+  - Meeting coordination
+  - Task prioritization
+  - Administrative support
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **SEO**
+  - On-page optimization
+  - Keyword research
+  - Content optimization
+  - SEO strategy development
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Skip Tracing**
+  - Data research and verification
+  - Lead generation
+  - Information gathering and validation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🛠️ Tools & Technologies
+- Go High Level (GHL)
+- AI Automation Tools
+- Email Marketing Platforms
+- Social Media Management Tools
+- SEO Tools
+- Skip Tracing Software
+- Project Management Software
+
+## 📫 Contact Information
+Pilveraleonald@gmail.com
+
+## 🤝 Let's Connect
+I'm always interested in new opportunities and collaborations. Feel free to reach out if you need assistance with:
+- Business Automation
+- Email Marketing Campaigns
+- Social Media Strategy
+- Executive Assistant Services
+- SEO Optimization
+- Skip Tracing Projects
+
+---
+*Available for full-time positions and project-based work*
