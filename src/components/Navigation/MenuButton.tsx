@@ -10,7 +10,7 @@ const MenuButton = ({ isOpen, onClick }: MenuButtonProps) => {
   return (
     <motion.button
       onClick={onClick}
-      className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900"
+      className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-cyan-300 transition-colors duration-200"
       whileTap={{ scale: 0.8 }}
     >
       <motion.div

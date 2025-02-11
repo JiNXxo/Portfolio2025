@@ -26,7 +26,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full backdrop-blur-md z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Logo />
@@ -37,6 +37,7 @@ const Navigation = () => {
         </div>
         <MobileNav
           isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
           navItems={navItems}
           onNavigate={scrollToSection}
         />
