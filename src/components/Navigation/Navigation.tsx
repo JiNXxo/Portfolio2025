@@ -37,6 +37,7 @@ const Navigation = () => {
         </div>
         <MobileNav
           isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
           navItems={navItems}
           onNavigate={scrollToSection}
         />
