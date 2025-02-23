@@ -9,12 +9,12 @@ const About = () => {
 
       {/* Content Container */}
       <div className="relative container mx-auto px-6 md:px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Grid Layout */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Left Column - Image */}
             <div className="relative">
-              <div className="aspect-11/12 rounded-2xl overflow-hidden backdrop-blur-sm bg-white/5 p-2">
+              <div className="aspect-11/12 rounded-2xl overflow-hidden backdrop-blur-sm bg-white/5 p-2 md:p-4">
                 <img
                   src="leonald-pilvera.webp" // Replace with your image path
                   alt="Professional VA"
