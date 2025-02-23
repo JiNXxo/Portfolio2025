@@ -1,4 +1,3 @@
-import { nav } from "framer-motion/client";
 import Logo from "./Logo";
 import { X } from "lucide-react";
 
