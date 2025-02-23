@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Glowing orbs - adjusted for mobile */}
       <div aria-hidden="true" className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-64 md:h-64 rounded-full bg-blue-500/30 blur-3xl"></div>
