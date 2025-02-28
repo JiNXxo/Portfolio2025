@@ -42,6 +42,7 @@ const MobileNav = ({ isOpen, navItems, onNavigate, onClose }: MobileNavProps) =>
         </button >
       ))}
       </div>
+      
   </div>
 </nav>
 
