@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
 
 const contactItems = [
@@ -10,12 +10,6 @@ const contactItems = [
     label: "Email",
     value: "pilveraleonald@gmail.com",
     href: "mailto:pilveraleonald@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+639515200853",
-    href: "tel:+639515200853",
   },
   {
     icon: Linkedin,
@@ -35,7 +29,7 @@ export default function Contact() {
             Ready to streamline your operations? Let&apos;s connect.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-lg mx-auto">
             {contactItems.map((item, i) => (
               <motion.a
                 key={item.label}

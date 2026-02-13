@@ -1,27 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Mail,
+  Zap,
+  Database,
+  Code2,
+  Workflow,
+  Globe,
+} from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
 
-const technicalSkills = [
-  { name: "Programming", level: 80 },
-  { name: "Web Development", level: 85 },
-  { name: "Python", level: 75 },
-  { name: "ReactJS", level: 80 },
-  { name: "Git", level: 70 },
-  { name: "Visual Studio Code", level: 90 },
+const tools = [
+  { icon: Zap, name: "GoHighLevel", category: "Automation" },
+  { icon: Mail, name: "Cold Email Platforms", category: "Outreach" },
+  { icon: Database, name: "CRM Systems", category: "Sales" },
+  { icon: Workflow, name: "Zapier / Make", category: "Integration" },
+  { icon: Code2, name: "Python", category: "Development" },
+  { icon: Globe, name: "ReactJS / Next.js", category: "Web Development" },
 ];
 
 const softSkills = [
-  "Innovative Thinking & Creativity",
-  "Strong Interpersonal Skills",
-  "Analytical & Critical Thinking",
-  "Advanced Problem-Solving",
-  "Effective Public Speaking",
-  "Exceptional Customer Service",
-  "Team Leadership & Collaboration",
-  "Strong Communication Skills",
-  "Active Listening & Engagement",
+  "Team Leadership & Coaching",
+  "Strategic Problem-Solving",
+  "Clear Communication",
+  "Process Optimization",
+  "Client Relationship Management",
 ];
 
 const languages = ["English", "Filipino"];
@@ -34,7 +38,7 @@ export default function Skills() {
           <SectionHeading label="Skills" title="What I Bring to the Table" />
 
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-            {/* Technical Skills */}
+            {/* Tools & Technologies */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -42,25 +46,28 @@ export default function Skills() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-xl font-semibold text-blue-400 mb-6">
-                Technical Skills
+                Tools &amp; Technologies
               </h3>
-              <div className="space-y-5">
-                {technicalSkills.map((skill, i) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-gray-500">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
-                        className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"
-                      />
-                    </div>
-                  </div>
+              <div className="grid grid-cols-2 gap-4">
+                {tools.map((tool, i) => (
+                  <motion.div
+                    key={tool.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    whileHover={{
+                      y: -2,
+                      boxShadow: "0 0 15px rgba(59, 130, 246, 0.2)",
+                    }}
+                    className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-blue-500/30 transition-colors"
+                  >
+                    <tool.icon size={20} className="text-blue-400 mb-2" />
+                    <p className="text-sm font-medium text-white">
+                      {tool.name}
+                    </p>
+                    <p className="text-xs text-gray-500">{tool.category}</p>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -73,7 +80,7 @@ export default function Skills() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h3 className="text-xl font-semibold text-cyan-400 mb-6">
-                Soft Skills
+                Core Strengths
               </h3>
               <div className="flex flex-wrap gap-3">
                 {softSkills.map((skill, i) => (

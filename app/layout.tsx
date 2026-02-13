@@ -10,7 +10,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Leonald Pilvera | Virtual Assistant & Automation Expert",
   description:
-    "Accomplished Production Team Leader with over 3 years of experience in the BPO industry. Virtual Assistant specializing in automation and operational efficiency.",
+    "Virtual Assistant & Automation Expert specializing in cold email marketing, GoHighLevel automation, and operational efficiency with 15+ years of experience.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: "Leonald Pilvera",
+  },
 };
 
 export default function RootLayout({

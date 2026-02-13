@@ -10,49 +10,35 @@ const roles = [
     company: "CSD",
     period: "May 2024 - Present",
     description:
-      "Lead and develop high-performing teams, streamline operations, and ensure alignment of departmental goals with business objectives.",
+      "Lead cross-functional teams, manage cold email outreach campaigns, and implement GoHighLevel automation workflows that streamline client acquisition and retention.",
   },
   {
     title: "Executive Assistant",
     company: "Producer Masterminds",
     period: "Nov 2022 - Apr 2024",
     description:
-      "Drive business growth, develop strategic contacts, identify emerging market opportunities, and manage sales projections.",
-  },
-  {
-    title: "Direct Sales Representative",
-    company: "Producer Masterminds",
-    period: "May 2022 - Oct 2022",
-    description:
-      "Assisted Web3 companies in launching and scaling projects, contributing to 20+ NFT initiatives.",
+      "Managed sales projections and revenue forecasting, developed strategic business contacts, and identified emerging market opportunities to drive consistent growth.",
   },
   {
     title: "Senior Operations Supervisor",
     company: "AV Outsourcing / Citizens Disability",
     period: "Jan 2019 - Apr 2020",
     description:
-      "Managed Intake team, coached customer service best practices, and led comprehensive training on company services.",
+      "Supervised intake team operations, coached staff on customer service best practices, and built training programs that improved team performance and client satisfaction.",
   },
   {
     title: "Production Team Lead",
-    company: "TELEOUTSOURCING",
+    company: "Teleoutsourcing",
     period: "Jan 2015 - Jan 2019",
     description:
-      "Optimized revenue streams, increased sales by 80-85%, and coordinated projects across major UK and US campaigns.",
+      "Increased sales by 80-85% through targeted campaign management and performance coaching. Coordinated major UK and US outreach campaigns across multiple teams.",
   },
   {
-    title: "Marketing Manager",
-    company: "Yeshua Auto Air Conditioning Parts & Supplies",
-    period: "Apr 2014 - Dec 2014",
-    description:
-      "Developed marketing materials for sales presentations and implemented favorable pricing structures.",
-  },
-  {
-    title: "Professional Freelancer",
-    company: "Work From Home",
+    title: "Freelance Virtual Assistant",
+    company: "Self-Employed",
     period: "Oct 2007 - Jun 2011",
     description:
-      "Developed strategic solutions, managed intake operations for SSDI/SSI claims, and specialized in outreach campaigns.",
+      "Managed intake operations for SSDI/SSI claims, executed outreach campaigns, and developed strategic solutions for remote clients across multiple industries.",
   },
 ];
 

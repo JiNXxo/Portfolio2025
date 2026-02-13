@@ -7,9 +7,9 @@ import AnimatedCounter from "@/components/ui/animated-counter";
 import SectionHeading from "@/components/ui/section-heading";
 
 const stats = [
-  { value: 3, suffix: "+", label: "Years BPO Experience" },
-  { value: 20, suffix: "+", label: "NFT Projects Launched" },
-  { value: 85, suffix: "%", label: "Sales Increase Achieved" },
+  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: 85, suffix: "%", label: "Sales Growth Achieved" },
+  { value: 5, suffix: "+", label: "Companies Transformed" },
 ];
 
 export default function About() {
@@ -64,14 +64,15 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <SectionHeading label="About Me" title="Accomplished Production Team Leader" />
+            <SectionHeading label="About Me" title="Your Operations, Automated" />
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              Accomplished Production Team Leader with over 3 years of experience
-              in the BPO industry, renowned for effectively resolving complex
-              issues, enhancing customer satisfaction, and driving operational
-              efficiencies. Proven track record of cost optimization and profit
-              growth through strategic leadership and continuous process
-              improvements.
+              I help businesses streamline their operations and scale revenue through
+              cold email marketing, GoHighLevel automation, and strategic process
+              optimization. With 15+ years across BPO, sales, and team leadership,
+              I bring a unique blend of hands-on operational expertise and modern
+              automation tools to every engagement. At my last role, I drove an
+              80-85% sales increase through targeted campaign management and
+              performance coaching.
             </p>
 
             {/* Stats */}
