@@ -34,9 +34,9 @@ const roles = [
       "Increased sales by 80-85% through targeted campaign management and performance coaching. Coordinated major UK and US outreach campaigns across multiple teams.",
   },
   {
-    title: "Freelance Virtual Assistant",
+    title: "Freelancer",
     company: "Self-Employed",
-    period: "Oct 2007 - Jun 2011",
+    period: "Oct 2007 - Present",
     description:
       "Managed intake operations for SSDI/SSI claims, executed outreach campaigns, and developed strategic solutions for remote clients across multiple industries.",
   },
