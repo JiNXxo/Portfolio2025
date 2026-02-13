@@ -8,7 +8,7 @@ const testimonials = [
   {
     quote:
       "He really took on Go High Level, learning how to build automations and monitor reporting. He helped set up our cold email campaigns through Instantly — the DNS settings, SPFs, DKIMs, DMARCs — he knows how to set those up. He's just a very solid worker. I paid him very well because he earned every penny.",
-    name: "Dave",
+    name: "Isaac Williamson",
     role: "Premier Agent Consulting",
     video: "https://www.youtube.com/shorts/9sJFbDFVk34",
   },
@@ -22,7 +22,7 @@ const testimonials = [
   {
     quote:
       "He's a very good hard worker. He always gets the job done. He's always on time. I would take him back in a heartbeat. If anyone's interested in a solid virtual assistant, please pick up Leonald — for any position really, he's awesome.",
-    name: "Elijah",
+    name: "Elijah Small",
     role: "Former Client",
     video: "https://www.youtube.com/shorts/iJWXbLGL2PY",
   },
