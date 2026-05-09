@@ -105,7 +105,7 @@ const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: st
 const testimonials = [
   {
     quote:
-      "Social Media Marketing, Web3 & Web2 Outreach, Real Estate Outreach, Business Outreach, Direct Email, Lead Scraper, Outreach Manager, Top Seller a full ervice, multi‑channel outreach program designed to generate qualified leads, book meetings.",
+      "Social Media Marketing & Multi‑Channel Outreach, We deliver a full‑service, results‑driven outreach program that combines Web3 & Web2 strategies, Real Estate outreach, Business development campaigns, Direct Email marketing, Lead scraping, and professional Outreach Management. Our approach is designed to generate qualified leads, secure booked meetings, and drive measurable growth. By blending advanced social media marketing with proven cold email systems, we ensure your brand reaches the right audience at the right time. Clients trust us because we don’t just send messages — we build relationships that convert. From crafting personalized campaigns to safeguarding deliverability and sender reputation, we provide a scalable, reliable, and performance‑oriented solution that adapts to your business goals. With our expertise, you gain more than outreach — you gain a strategic partner committed to helping you grow, close deals, and dominate your market.",
     name: "Isaac Williamson",
     role: "COO of LeadMedia",
     video: "https://www.youtube.com/shorts/9sJFbDFVk34",
