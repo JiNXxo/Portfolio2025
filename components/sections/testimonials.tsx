@@ -7,24 +7,24 @@ import SectionHeading from "@/components/ui/section-heading";
 const testimonials = [
   {
     quote:
-      "Web3 & Web2 Outreach, Real Estate Outreach, Business Outreach, Direct Email, Lead Scraper, Outreach Manager, Top Seller a full service, multi‑channel outreach program designed to generate qualified leads, book meetings.",
+      "Web3 & Web2 Outreach, Real Estate Outreach, Business Outreach, Direct Email, Lead Scraper, Outreach Manager, Top Seller a full ervice, multi‑channel outreach program designed to generate qualified leads, book meetings.",
     name: "Isaac Williamson",
-    role: "Business Development Outreach Strategist",
+    role: "COO of LeadMedia",
     video: "https://www.youtube.com/shorts/9sJFbDFVk34",
   },
   {
     quote:
-      "I had him on my team as a VA doing appointment setting and outreach for my business and he was absolutely outstanding. He's skilled in his ability to follow instruction and detail and actually convert conversations through appointment setting. He's reliable, works very hard, and I definitely recommend him.",
-    name: "Karlin Landis",
-    role: "Business Owner",
-    video: "https://www.youtube.com/shorts/Blw-WaegB2M",
+      "As an Executive Assistant, I provide comprehensive support that empowers business owners to focus on growth. Beyond managing calendars, meetings, and communications, I oversee their GoHighLevel CRM to ensure smooth client workflows and pipeline visibility. I also manage call centers and agents, implement quality assurance processes, and streamline operations to maximize efficiency. My role is not just administrative — it’s strategic: anticipating needs, maintaining structure, and driving performance so leaders can scale their vision with confidence.",
+    name: "David Leathers",
+    role: "Founder of Premier Agent Consulting",
+    video: "https://youtu.be/9qKtRMTxP5o?si=B9lBQ99_tZN4XisI",
   },
   {
     quote:
-      "He's a very good hard worker. He always gets the job done. He's always on time. I would take him back in a heartbeat. If anyone's interested in a solid virtual assistant, please pick up Leonald — for any position really, he's awesome.",
-    name: "Elijah Small",
-    role: "Former Client",
-    video: "https://www.youtube.com/shorts/iJWXbLGL2PY",
+      "I help business owners launch their dream cold email campaigns from zero to hero. That means handling the entire setup: registering domains and users, configuring DNS records for proper authentication, and warming inboxes to build trust. From there, I scrape and qualify high-quality leads, craft personalized outreach that resonates, and manage follow-ups to keep conversations alive. Finally, I scale campaigns into booked meetings and sales — all while safeguarding deliverability and sender reputation through smart automations and weekly rotations. With me, your outreach isn’t just set up — it’s built to perform, adapt, and grow.",
+    name: "Riley Feldman",
+    role: "Managing Partner at Catalyst FG",
+    video: "https://youtu.be/4LyZQxJJDBk?si=5mAM2_Y8gNZKY7kl",
   },
 ];
 
