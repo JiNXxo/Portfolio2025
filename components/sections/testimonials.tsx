@@ -12,6 +12,79 @@ const getYoutubeVideoId = (url: string) => {
 const getYoutubeThumbnailUrl = (videoId: string) =>
   `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
+const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: string; name: string; role: string; video: string }; delay: number }) => {
+  const videoId = getYoutubeVideoId(testimonial.video);
+  const thumbnailUrl = videoId ? getYoutubeThumbnailUrl(videoId) : null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay }}
+      className="group overflow-hidden rounded-[32px] border border-white/5 bg-white/5 shadow-[0_24px_80px_-52px_rgba(255,255,255,0.35)] min-h-[36rem]"
+    >
+      {thumbnailUrl && (
+        <a
+          href={testimonial.video}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative block overflow-hidden"
+        >
+          <div className="relative aspect-[9/16] w-full overflow-hidden bg-slate-950">
+            <img
+              src={thumbnailUrl}
+              alt={`${testimonial.name} video thumbnail`}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600/95 shadow-[0_18px_40px_-10px_rgba(0,0,0,0.6)]">
+                <Play size={28} className="text-white" />
+              </div>
+            </div>
+            <div className="absolute left-4 top-4 text-left">
+              <p className="text-xs uppercase tracking-[0.32em] text-slate-200/80">
+                Testimonial Video
+              </p>
+              <p className="mt-2 text-sm font-semibold text-white">
+                {testimonial.name}
+              </p>
+            </div>
+          </div>
+        </a>
+      )}
+
+      <div className="flex flex-col flex-1 p-6">
+        <div className="relative flex-1">
+          <Quote size={32} className="text-blue-500/20 absolute top-6 right-6" />
+          <p className="text-gray-300 text-sm leading-relaxed italic">
+            &ldquo;{testimonial.quote}&rdquo;
+          </p>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-white/5">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-white font-semibold text-sm">{testimonial.name}</p>
+              <p className="text-gray-500 text-xs">{testimonial.role}</p>
+            </div>
+            <a
+              href={testimonial.video}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              <Play size={12} />
+              Watch
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 const testimonials = [
   {
     quote:
@@ -41,76 +114,15 @@ export default function Testimonials() {
     <section id="testimonials" className="relative py-24 md:py-32">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading
-            label="Testimonials"
-            title="What People Say"
-          />
+          <SectionHeading label="Testimonials" title="What People Say" />
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-3">
             {testimonials.map((testimonial, i) => (
-              <motion.div
+              <VideoTestimonialCard
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="flex flex-col p-6 bg-white/5 border border-white/5 rounded-xl relative"
-              >
-                <Quote
-                  size={32}
-                  className="text-blue-500/20 absolute top-4 right-4"
-                />
-
-                {(() => {
-                  const videoId = getYoutubeVideoId(testimonial.video);
-                  const thumbnailUrl = videoId
-                    ? getYoutubeThumbnailUrl(videoId)
-                    : null;
-
-                  return thumbnailUrl ? (
-                    <a
-                      href={testimonial.video}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block mb-5 overflow-hidden rounded-xl group"
-                    >
-                      <div className="relative aspect-video rounded-xl overflow-hidden">
-                        <img
-                          src={thumbnailUrl}
-                          alt={`${testimonial.name} video thumbnail`}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity group-hover:opacity-90">
-                          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
-                            <Play size={28} className="text-white" />
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  ) : null;
-                })()}
-
-                <p className="text-gray-300 text-sm leading-relaxed italic flex-1">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div className="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
-                  <div>
-                    <p className="text-white font-semibold text-sm">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-gray-500 text-xs">{testimonial.role}</p>
-                  </div>
-                  <a
-                    href={testimonial.video}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    <Play size={12} />
-                    Watch
-                  </a>
-                </div>
-              </motion.div>
+                testimonial={testimonial}
+                delay={i * 0.15}
+              />
             ))}
           </div>
         </div>
