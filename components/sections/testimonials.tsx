@@ -105,7 +105,7 @@ const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: st
 const testimonials = [
   {
     quote:
-      "Web3 & Web2 Outreach, Real Estate Outreach, Business Outreach, Direct Email, Lead Scraper, Outreach Manager, Top Seller a full ervice, multi‑channel outreach program designed to generate qualified leads, book meetings.",
+      "Social Media Marketing, Web3 & Web2 Outreach, Real Estate Outreach, Business Outreach, Direct Email, Lead Scraper, Outreach Manager, Top Seller a full ervice, multi‑channel outreach program designed to generate qualified leads, book meetings.",
     name: "Isaac Williamson",
     role: "COO of LeadMedia",
     video: "https://www.youtube.com/shorts/9sJFbDFVk34",
