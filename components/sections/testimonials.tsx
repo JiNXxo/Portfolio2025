@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 import { Quote, Play } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
 
+const getYoutubeVideoId = (url: string) => {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([A-Za-z0-9_-]{11})/);
+  return match ? match[1] : "";
+};
+
+const getYoutubeThumbnailUrl = (videoId: string) =>
+  `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
 const testimonials = [
   {
     quote:
@@ -52,6 +60,36 @@ export default function Testimonials() {
                   size={32}
                   className="text-blue-500/20 absolute top-4 right-4"
                 />
+
+                {(() => {
+                  const videoId = getYoutubeVideoId(testimonial.video);
+                  const thumbnailUrl = videoId
+                    ? getYoutubeThumbnailUrl(videoId)
+                    : null;
+
+                  return thumbnailUrl ? (
+                    <a
+                      href={testimonial.video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block mb-5 overflow-hidden rounded-xl group"
+                    >
+                      <div className="relative aspect-video rounded-xl overflow-hidden">
+                        <img
+                          src={thumbnailUrl}
+                          alt={`${testimonial.name} video thumbnail`}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity group-hover:opacity-90">
+                          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
+                            <Play size={28} className="text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  ) : null;
+                })()}
+
                 <p className="text-gray-300 text-sm leading-relaxed italic flex-1">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
