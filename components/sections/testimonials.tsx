@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Quote, Play } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
@@ -9,12 +10,16 @@ const getYoutubeVideoId = (url: string) => {
   return match ? match[1] : "";
 };
 
-const getYoutubeThumbnailUrl = (videoId: string) =>
-  `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+const getYoutubeThumbnailUrls = (videoId: string) => [
+  `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+  `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
+  `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+];
 
 const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: string; name: string; role: string; video: string }; delay: number }) => {
   const videoId = getYoutubeVideoId(testimonial.video);
-  const thumbnailUrl = videoId ? getYoutubeThumbnailUrl(videoId) : null;
+  const thumbnailUrls = videoId ? getYoutubeThumbnailUrls(videoId) : [];
+  const [thumbnailSrc, setThumbnailSrc] = useState(thumbnailUrls[0] || "");
 
   return (
     <motion.div
@@ -24,7 +29,7 @@ const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: st
       transition={{ delay }}
       className="group overflow-hidden rounded-[32px] border border-white/5 bg-white/5 shadow-[0_24px_80px_-52px_rgba(255,255,255,0.35)] min-h-[36rem]"
     >
-      {thumbnailUrl && (
+      {thumbnailSrc && (
         <a
           href={testimonial.video}
           target="_blank"
@@ -33,8 +38,15 @@ const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: st
         >
           <div className="relative aspect-[9/16] w-full overflow-hidden bg-slate-950">
             <img
-              src={thumbnailUrl}
+              src={thumbnailSrc}
               alt={`${testimonial.name} video thumbnail`}
+              loading="lazy"
+              onError={() => {
+                const nextIndex = thumbnailUrls.indexOf(thumbnailSrc) + 1;
+                if (nextIndex < thumbnailUrls.length) {
+                  setThumbnailSrc(thumbnailUrls[nextIndex]);
+                }
+              }}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/30" />
