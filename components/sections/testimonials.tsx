@@ -16,9 +16,14 @@ const getYoutubeThumbnailUrls = (videoId: string) => [
   `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
 ];
 
-const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: string; name: string; role: string; video: string }; delay: number }) => {
+const VideoTestimonialCard = ({ testimonial, delay }: { testimonial: { quote: string; name: string; role: string; video: string; thumbnail?: string }; delay: number }) => {
   const videoId = getYoutubeVideoId(testimonial.video);
-  const thumbnailUrls = videoId ? getYoutubeThumbnailUrls(videoId) : [];
+  const manualThumbnail = testimonial.thumbnail;
+  const thumbnailUrls = manualThumbnail
+    ? [manualThumbnail, ...(videoId ? getYoutubeThumbnailUrls(videoId) : [])]
+    : videoId
+    ? getYoutubeThumbnailUrls(videoId)
+    : [];
   const [thumbnailSrc, setThumbnailSrc] = useState(thumbnailUrls[0] || "");
 
   return (
@@ -104,6 +109,7 @@ const testimonials = [
     name: "Isaac Williamson",
     role: "COO of LeadMedia",
     video: "https://www.youtube.com/shorts/9sJFbDFVk34",
+    thumbnail: "https://img.youtube.com/vi/9sJFbDFVk34/hqdefault.jpg",
   },
   {
     quote:
@@ -111,6 +117,7 @@ const testimonials = [
     name: "David Leathers",
     role: "Founder of Premier Agent Consulting",
     video: "https://youtu.be/9qKtRMTxP5o?si=B9lBQ99_tZN4XisI",
+    thumbnail: "https://img.youtube.com/vi/9qKtRMTxP5o/hqdefault.jpg",
   },
   {
     quote:
@@ -118,6 +125,7 @@ const testimonials = [
     name: "Riley Feldman",
     role: "Managing Partner at Catalyst FG",
     video: "https://youtu.be/4LyZQxJJDBk?si=5mAM2_Y8gNZKY7kl",
+    thumbnail: "https://img.youtube.com/vi/4LyZQxJJDBk/hqdefault.jpg",
   },
 ];
 
