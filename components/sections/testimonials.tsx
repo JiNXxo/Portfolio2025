@@ -7,9 +7,9 @@ import SectionHeading from "@/components/ui/section-heading";
 const testimonials = [
   {
     quote:
-      "He really took on Go High Level, learning how to build automations and monitor reporting. He helped set up our cold email campaigns through Instantly — the DNS settings, SPFs, DKIMs, DMARCs — he knows how to set those up. He's just a very solid worker. I paid him very well because he earned every penny.",
+      "Web3 & Web2 Outreach, Real Estate Outreach, Business Outreach, Direct Email, Lead Scraper, Outreach Manager, Top Seller a full service, multi‑channel outreach program designed to generate qualified leads, book meetings.",
     name: "Isaac Williamson",
-    role: "Premier Agent Consulting",
+    role: "Business Development Outreach Strategist",
     video: "https://www.youtube.com/shorts/9sJFbDFVk34",
   },
   {
